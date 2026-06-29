@@ -9,7 +9,7 @@ const contactLinks = [
 export default function Contact() {
   return (
     <section id="contact" className="mx-auto max-w-5xl px-6 py-24 text-center">
-      <h2 className="mb-4 text-3xl font-bold tracking-tight text-header">
+      <h2 className="mb-6 text-lg leading-relaxed text-header">
         Get in Touch
       </h2>
       <p className="mb-12 text-muted-foreground">

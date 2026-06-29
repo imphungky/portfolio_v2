@@ -8,7 +8,7 @@ const skills = [
 export default function About() {
   return (
     <section id="about" className="mx-auto max-w-5xl px-6 py-24">
-      <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-header">
+      <h2 className="mb-12 text-center text-lg text-header">
         About Me
       </h2>
       <div className="grid gap-12 md:grid-cols-2">
@@ -29,7 +29,7 @@ export default function About() {
           </p>
         </div>
         <div>
-          <h3 className="mb-4 font-semibold text-header">Skills</h3>
+          <h3 className="mb-4 font-pixel text-xs text-header">Skills</h3>
           <div className="flex flex-wrap gap-2">
             {skills.map((skill) => (
               <Badge key={skill} variant="secondary">

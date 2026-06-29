@@ -4,22 +4,22 @@ import { Button } from '@/components/ui/button'
 
 const projects = [
   {
+    title: 'Jace',
+    description: 'Deckbuilding assistant taking your brews to the next level. Jace gets his data from scryfall and makes suggestions based on your list.',
+    tags: ['Python', 'FastAPI', 'Docker'],
+    links: { live: 'https://jacemtg.xyz', github: '#' },
+  },
+  {
+    title: 'teamshook',
+    description: 'Open source webhook service reacting to Github and JIRA events to post standardized notifications.',
+    tags: ['Go'],
+    links: { github: '#' },
+  },
+  {
     title: 'PostureAI',
     description: 'Facial recognition powered by AI. Built to keep your posture in check.',
     tags: ['React', 'Node.js'],
-    links: { live: '#', github: '#' },
-  },
-  {
-    title: 'Project Two',
-    description: 'A brief description of what this project does and the problem it solves.',
-    tags: ['Python', 'FastAPI', 'Docker'],
-    links: { live: '#', github: '#' },
-  },
-  {
-    title: 'Project Three',
-    description: 'A brief description of what this project does and the problem it solves.',
-    tags: ['TypeScript', 'Next.js', 'Tailwind'],
-    links: { live: '#', github: '#' },
+    links: { github: 'https://github.com/imphungky/PostureAI' },
   },
 ]
 
@@ -38,11 +38,13 @@ function ProjectCard({ title, description, tags, links }) {
         ))}
       </CardContent>
       <CardFooter className="mt-auto flex gap-2">
+        {links.live && 
         <Button size="sm" asChild>
           <a href={links.live} target="_blank" rel="noopener noreferrer">
-            Live Demo
+            View
           </a>
         </Button>
+        }
         <Button size="sm" variant="outline" asChild>
           <a href={links.github} target="_blank" rel="noopener noreferrer">
             GitHub
@@ -56,7 +58,7 @@ function ProjectCard({ title, description, tags, links }) {
 export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-24">
-      <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-header">
+      <h2 className="mb-12 text-center text-lg text-header">
         Projects
       </h2>
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
