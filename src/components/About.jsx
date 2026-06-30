@@ -1,9 +1,7 @@
 import { Badge } from '@/components/ui/badge'
+import config from '@/config'
 
-const skills = [
-  'JavaScript', 'TypeScript', 'React', 'Node.js',
-  'Python', 'SQL', 'Git', 'REST APIs',
-]
+const { paragraphs, skills } = config.about
 
 export default function About() {
   return (
@@ -13,20 +11,14 @@ export default function About() {
       </h2>
       <div className="grid gap-12 md:grid-cols-2">
         <div>
-          <p className="mb-4 text-muted-foreground leading-relaxed">
-            {/* I&apos;m a software developer passionate about building clean,
-            efficient, and user-friendly applications. I enjoy solving complex
-            problems and turning ideas into reality through code. */}
-            I&apos;m a software developer who moves between mobile, backend,
-            and infrastructure without losing the thread. Based in Ontario,
-            I&apos;ve spent the last 3 years at JANA Corporation building GIS field applications,
-            improving web performance, and quietly filling the gaps no one else was covering.
-            I&apos;m most at home on problems that don't fit neatly into one discipline.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            When I&apos;m not coding, you can find me exploring new technologies,
-            contributing to open-source projects, or learning something new.
-          </p>
+          {paragraphs.map((paragraph, i) => (
+            <p
+              key={i}
+              className="mb-4 text-muted-foreground leading-relaxed last:mb-0"
+            >
+              {paragraph}
+            </p>
+          ))}
         </div>
         <div>
           <h3 className="mb-4 font-pixel text-xs text-header">Skills</h3>

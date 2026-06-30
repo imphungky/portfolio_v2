@@ -1,10 +1,7 @@
 import { Button } from '@/components/ui/button'
+import config from '@/config'
 
-const contactLinks = [
-  { label: 'Email', href: 'mailto:your@email.com', icon: '✉' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/yourhandle', icon: '🔗' },
-  { label: 'GitHub', href: 'https://github.com/yourhandle', icon: '⌥' },
-]
+const { blurb, links: contactLinks } = config.contact
 
 export default function Contact() {
   return (
@@ -13,7 +10,7 @@ export default function Contact() {
         Get in Touch
       </h2>
       <p className="mb-12 text-muted-foreground">
-        I&apos;m currently open to new opportunities. Feel free to reach out!
+        {blurb}
       </p>
       <div className="flex flex-wrap items-center justify-center gap-4">
         {contactLinks.map((link) => (

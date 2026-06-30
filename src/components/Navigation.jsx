@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button'
+import config from '@/config'
 
 const links = [
   { label: 'About', href: '#about' },
@@ -11,7 +12,7 @@ export default function Navigation() {
     <nav className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-sm">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <a href="#" className="font-pixel text-sm text-header">
-          Portfolio
+          {config.siteName}
         </a>
         <div className="flex items-center gap-2">
           {links.map((link) => (
@@ -20,7 +21,7 @@ export default function Navigation() {
             </Button>
           ))}
           <Button className="h-10 px-4 text-base" asChild>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a href={config.resumeUrl} target="_blank" rel="noopener noreferrer">
               Resume
             </a>
           </Button>

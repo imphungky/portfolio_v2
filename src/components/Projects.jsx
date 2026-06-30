@@ -1,27 +1,9 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import config from '@/config'
 
-const projects = [
-  {
-    title: 'Jace',
-    description: 'Deckbuilding assistant taking your brews to the next level. Jace gets his data from scryfall and makes suggestions based on your list.',
-    tags: ['Python', 'FastAPI', 'Docker'],
-    links: { live: 'https://jacemtg.xyz', github: '#' },
-  },
-  {
-    title: 'teamshook',
-    description: 'Open source webhook service reacting to Github and JIRA events to post standardized notifications.',
-    tags: ['Go'],
-    links: { github: '#' },
-  },
-  {
-    title: 'PostureAI',
-    description: 'Facial recognition powered by AI. Built to keep your posture in check.',
-    tags: ['React', 'Node.js'],
-    links: { github: 'https://github.com/imphungky/PostureAI' },
-  },
-]
+const { projects } = config
 
 function ProjectCard({ title, description, tags, links }) {
   return (
